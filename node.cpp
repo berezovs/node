@@ -11,3 +11,10 @@ int Node::getValue(){
 void Node::setValue(int value){
 	this->value = value;
 }
+
+void Node::setNext(Node *node){
+	this->next = node;
+}
+Node *Node::getNext(){
+	return next;
+}
