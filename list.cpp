@@ -6,12 +6,18 @@
 List::List(){
 	this->head = nullptr;
 }
-void List::print(){
-	Node *newNode = new Node(value);
-	if(this->head==nullptr){
-		this->head = newNode;
-	}
-}
 void List::prepend(int value){
-	std::cout<<this->head<<std::endl;
+	Node *newNode = new Node(value);
+	newNode->setNext(this->head);
+	this->head = newNode;
+	
+}
+void List::print(){
+	
+Node *current = this->head;
+while(current!=nullptr) {
+		std::cout<<current->getValue()<<std::endl;
+		current = current->getNext();
+	}
+	
 }
