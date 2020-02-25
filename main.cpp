@@ -16,5 +16,7 @@ int main() {
 	List *myList = new List();
 	myList->prepend(3);
 	myList->prepend(2);
+	myList->append(5);
+	myList.inserAt(2,4);
 	myList->print();
 }

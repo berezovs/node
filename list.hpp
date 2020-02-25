@@ -6,9 +6,13 @@ class List{
 		List();
 		void prepend(int value);
 		void print();
+		int getLength();
+		bool isEmpty();
+		void append(int value);
+		void insertAt(int position, int value);
 	private:
-	Node* head;
-	int value;
+	Node* head, *tail;
+	int value, length;
 
 };
  #endif
